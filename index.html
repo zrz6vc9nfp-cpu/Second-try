@@ -4,25 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nexus AI Image Generator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to Nexus AI Image Generator</h1>
-    <p>This is a platform where you can generate images using artificial intelligence.</p>
-    <form id="image-generator-form">
-        <label for="prompt">Enter a Prompt:</label>
-        <input type="text" id="prompt" name="prompt" required>
-        <button type="submit">Generate Image</button>
-    </form>
-    <div id="image-result">
-        <p>Your generated image will appear here.</p>
+    <div class="container">
+        <header>
+            <h1>Nexus AI Image Generator</h1>
+        </header>
+        <main>
+            <section class="chat-interface">
+                <textarea id="chat-input" placeholder="Type your message..."></textarea>
+                <button id="send-button">Send</button>
+                <div id="chat-output"></div>
+            </section>
+            <section class="image-generator">
+                <h2>Generate an Image</h2>
+                <input type="text" id="image-prompt" placeholder="Enter image prompt...">
+                <button id="generate-button">Generate</button>
+                <div id="image-output"></div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2026 Nexus AI Image Generator. All rights reserved.</p>
+        </footer>
     </div>
-    <script>
-        document.getElementById('image-generator-form').onsubmit = function(e) {
-            e.preventDefault();
-            const prompt = document.getElementById('prompt').value;
-            // Call API to generate image with the given prompt
-            // Display the generated image in the image-result div
-        };
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
